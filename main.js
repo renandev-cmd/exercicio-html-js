@@ -13,20 +13,14 @@ form.addEventListener(`submit`, function(validacao) {
 
     const successMessage = `O Valor B (${valorB.value}) é maior que o Valor A (${valorA.value}), portanto, esta tudo certo!`
 
-    if (valorB.value > valorA.value){
+    if (Number(valorB.value) > Number(valorA.value)){
         document.querySelector(`.success-message`).innerHTML = successMessage;
         successContainer.style.display = `flex`;
         errorContainer.style.display = `none`;
     }
     else {
-        document.querySelector(`.success-message`).innerHTML = `O valor B deve ser maior do que o Valor A.`
+        document.querySelector(`.error-message`).innerHTML = `O valor B deve ser maior do que o Valor A.`
         successContainer.style.display = `none`;
         errorContainer.style.display = `flex`;
     }
 })
-
-
-
-
-
-
